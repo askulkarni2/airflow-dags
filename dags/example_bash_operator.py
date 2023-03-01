@@ -33,7 +33,7 @@ with DAG(
     for i in range(10):
         task = BashOperator(
             task_id='runme_' + str(i),
-            bash_command='echo "{{ task_instance_key_str }}" && sleep 1',
+            bash_command='echo "{{ task_instance_key_str }}" && sleep 900',
         )
         task >> run_this
 
