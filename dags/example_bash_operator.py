@@ -16,6 +16,7 @@ with DAG(
         dagrun_timeout=datetime.timedelta(minutes=60),
         tags=['example', 'example2'],
         params={"example_key": "example_value"},
+        max_active_tasks=110
 ) as dag:
     run_this_last = EmptyOperator(
         task_id='run_this_last',
